@@ -1,0 +1,124 @@
+
+/* Color varibles */
+:root {
+  --backgroundcolor: #ADD8E6;
+  --text-color: #231F20;
+  --odd-bar-color: #D3D3D3; 
+  --page-spacing: auto;
+}
+
+
+body {
+  background-color: var(--backgroundcolor);
+  margin: 0;
+}
+
+
+/* Creates the style forNavBar at the top of the page and has a hover action */
+.NavBar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: lightslategray;
+  height: 100px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  padding: var(--page--spacing);
+  border-color: var(--bg-color);
+  margin-bottom: 100px;
+  
+}
+
+.dropbtn {
+  background-color: lightblue;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.base-currency-dropdown {
+  margin-left: 50px;
+  position: relative;
+  display: inline-block;
+  width: 450px;
+
+}
+
+.dropdown-content-base {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  max-height: 500px;
+  overflow: auto;
+  background-color: lightslategray;
+}
+
+.dropdown-content-base button {
+  color: black;
+  padding: 12px 16px;
+  background-color: #FFFFFF;
+}
+
+
+.conversion-dropdown {
+  margin-left: 250px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-convert {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  max-height: 500px;
+  overflow: auto;
+  background-color: lightslategray;
+}
+
+.dropdown-content-convert button {
+  color: black;
+  padding: 12px 16px;
+  background-color: white;
+
+}
+
+.show {
+  display: block;
+}
+
+/* The MainContent is the flexbox containing all the bar charts */
+.MainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: var(--page-spacing);
+  height: 100vh;
+  align-items: flex-end;
+  flex: 1 0 auto;
+
+}
+
+/* Styles all the bar charts with hover action */
+.BarChart-bar {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  border: 1px solid black;
+  background-color: gray;
+  width: 150px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+  transition: 0.5s;
+  max-height: 100%;
+}
+
+.BarChart-bar:hover {
+  padding: 20px;
+  
+}
+
+/* Sets only the odd bars to lightgrey */
+.BarChart-bar:nth-child(even) {
+  background-color: var(--odd-bar-color);
+}
